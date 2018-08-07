@@ -26,3 +26,44 @@ $backround-opacity: 0.5;
         }
     }
 }
+
+// set text color
+
+@function set-text-color($color){
+    @if (lightness($color) > 40){
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+    
+}
+
+// media query mixin
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+    
+}
+// tablets
+@mixin mediaMd {
+    @media screen and (max-width: 768px)  {
+        @content;
+    }
+    
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+    
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px)  {
+        @content;
+    }
+    
+}
