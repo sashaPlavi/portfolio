@@ -36,7 +36,8 @@
 .menu.show {
   visibility: visible;
 }
-.menu-branding, .menu-nav {
+.menu-branding,
+.menu-nav {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -68,7 +69,8 @@
 .menu-branding .portret {
   width: 250px;
   height: 250px;
-  background: url("../img/IMG_4534sasha.jpg");
+  background: url("/dist/img/IMG_4534sasha.jpg");
+  background-size: cover;
   border-radius: 50%;
   border: solid 3px yellow;
 }
@@ -122,7 +124,7 @@ body {
   line-height: 1.5;
 }
 body#bg-img {
-  background: url(../img/background.jpg);
+  background: url("/dist/img/background.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
@@ -202,7 +204,7 @@ main#Home h1 {
 .bio-image {
   grid-area: bioimage;
   margin: auto;
-  border-radius: 20%;
+  border-radius: 50%;
   border: yellow 3px solid;
 }
 
@@ -267,13 +269,17 @@ main#Home h1 {
   color: #000;
 }
 
-.btn, .btn-light, .btn-dark {
+.btn,
+.btn-light,
+.btn-dark {
   display: block;
   padding: 0.5rem, 1rem;
   border: 0;
   margin-bottom: 0.3rem;
 }
-.btn:hover, .btn-light:hover, .btn-dark:hover {
+.btn:hover,
+.btn-light:hover,
+.btn-dark:hover {
   background: yellow;
   color: #000;
 }
@@ -317,13 +323,13 @@ main#Home h1 {
   }
 
   ul.menu-nav,
-div.menu-branding {
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
   }
   ul.menu-nav.show,
-div.menu-branding.show {
+  div.menu-branding.show {
     transform: translate3d(0, 0, 0);
   }
 
